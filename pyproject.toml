@@ -14,3 +14,9 @@ build-backend = "hatchling.build"
 dev = [
     "pytest>=7.0",
 ]
+demo = [
+    "fastapi>=0.141.1",
+    "nicegui>=3.16.0",
+    "starlette>=1.6.0",
+    "uvicorn>=0.32.0",
+]

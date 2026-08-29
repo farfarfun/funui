@@ -15,9 +15,15 @@
 
 ## 运行 Demo（Zwitter 聊天页面）
 
+Demo 的真实依赖（fastapi/nicegui/uvicorn/starlette 等）已迁移进 `pyproject.toml` 的
+`[dependency-groups] demo`，由 `uv.lock` 统一管理和自动升级；根目录
+`requirements.txt` 现在是 `uv export --group demo` 自动生成的产物，不再手工维护。
+
 ```bash
-pip install -r requirements.txt
+uv sync --group demo
 ./run.sh dev   # 或 ./run.sh prod
 ```
+
+或者仍然用 `pip install -r requirements.txt`（该文件由 uv 自动生成，效果等价）。
 
 默认监听 `127.0.0.1:8080`，依次访问 `/`（首页）、`/register`（注册）、`/login`（登录，默认账号见 `logins.json`）、`/chat`（聊天室）。
