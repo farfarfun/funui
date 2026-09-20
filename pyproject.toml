@@ -1,10 +1,18 @@
 [project]
 name = "funui"
 version = "1.0.4"
-description = "Add your description here"
+description = "farfarfun 预留的 Python UI 命名空间，目前不提供公开 API"
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "牛哥", email = "farfarfun@qq.com" }]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/farfarfun/funui"
+Repository = "https://github.com/farfarfun/funui"
+Issues = "https://github.com/farfarfun/todo-list/issues"
 
 [build-system]
 requires = ["hatchling"]
@@ -13,10 +21,4 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "pytest>=7.0",
-]
-demo = [
-    "fastapi>=0.141.1",
-    "nicegui>=3.16.0",
-    "starlette>=1.6.0",
-    "uvicorn>=0.32.0",
 ]
