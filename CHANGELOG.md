@@ -6,12 +6,11 @@
 
 ### 修复
 
+- 将 `1.0.4` 标记为待发布版本；PyPI 当前已发布版本为 `1.0.3`。
 - 修正 `pyproject.toml` 的 `[project.urls] Issues` 误指向 `farfarfun/todo-list`，
   改回本仓库 `farfarfun/funui/issues`。
 - `.gitignore` 补齐 `*.db`、`*.rar`、`.run/`、`logs/`、`.vscode/`，并取消 `.idea/` 的注释，
   覆盖 SPEC.md §10 要求的数据库、压缩包、运行时文件、日志、IDE 配置规则。
-
-## [1.0.4] - 2026-09-20
 
 ### 变更
 

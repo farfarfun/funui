@@ -9,8 +9,20 @@
 
 ## 安装
 
+### PyPI 已发布版本
+
 ```bash
 pip install funui
+```
+
+该命令安装 PyPI 上最新的已发布版本（当前为 `1.0.3`）。
+
+### 当前源码版本
+
+仓库当前的 `1.0.4` 尚未发布；需要使用该版本时，从源码安装：
+
+```bash
+pip install "funui @ git+https://github.com/farfarfun/funui.git"
 ```
 
 ## 最小示例
@@ -24,8 +36,21 @@ import funui
 ```bash
 uv sync
 uv run pytest
-uv build
+uv run funbuild install
 ```
+
+`funbuild install` 会执行构建及安装校验，但不会发布。
+
+## 发布
+
+发布当前待发布的 `1.0.4` 时，在测试和安装校验通过后执行：
+
+```bash
+uv run funbuild build --version 1.0.4
+```
+
+该流程会构建、安装校验、发布、提交并创建 Git 标签。后续常规发布使用
+`uv run funbuild build`，由 `funbuild` 自动递增版本。
 
 ---
 
